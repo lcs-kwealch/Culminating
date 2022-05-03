@@ -90,13 +90,111 @@ t.left(by: 90)
 t.forward(steps: 1 * scale)
 t.right(by: 90)
 
-for _ in 1...6{
+for _ in 1...5{
     //Start Drawing Arrow
 drawArrow()
     
 }
 
+//Move "T" to Start new row
+t.penUp()
+t.left(by: 90)
+t.forward(steps: 4 * scale)
+t.left(by: 90)
+t.forward(steps: 25 * scale)
+t.left(by: 180)
 
+//Row 2 of Arrows
+for _ in 1...5{
+    //Start Drawing Arrow
+drawArrow()
+    
+}
+
+//Row 3 of Arrows
+
+//Move "T" to Start new row
+t.penUp()
+t.left(by: 90)
+t.forward(steps: 4 * scale)
+t.left(by: 90)
+t.forward(steps: 25 * scale)
+t.left(by: 180)
+
+//Row 2 of Arrows
+for _ in 1...5{
+    //Start Drawing Arrow
+drawArrow()
+    
+}
+
+//Row 4
+
+//Move "T" to Start new row
+t.penUp()
+t.left(by: 90)
+t.forward(steps: 4 * scale)
+t.left(by: 90)
+t.forward(steps: 25 * scale)
+t.left(by: 180)
+
+//Row 2 of Arrows
+for _ in 1...5{
+    //Start Drawing Arrow
+drawArrow()
+    
+}
+
+//Row 5
+
+//Move "T" to Start new row
+t.penUp()
+t.left(by: 90)
+t.forward(steps: 4 * scale)
+t.left(by: 90)
+t.forward(steps: 25 * scale)
+t.left(by: 180)
+
+//Row 2 of Arrows
+for _ in 1...5{
+    //Start Drawing Arrow
+drawArrow()
+    
+}
+
+//Row 6
+
+//Move "T" to Start new row
+t.penUp()
+t.left(by: 90)
+t.forward(steps: 4 * scale)
+t.left(by: 90)
+t.forward(steps: 25 * scale)
+t.left(by: 180)
+
+//Row 2 of Arrows
+for _ in 1...5{
+    //Start Drawing Arrow
+drawArrow()
+    
+}
+
+//Row 7
+
+//Move "T" to Start new row
+t.penUp()
+t.left(by: 90)
+t.forward(steps: 4 * scale)
+t.left(by: 90)
+t.forward(steps: 25 * scale)
+t.left(by: 180)
+
+//Row 2 of Arrows
+for _ in 1...5{
+    //Start Drawing Arrow
+drawArrow()
+    
+}
 
 /*:
  ## Show the Live View
