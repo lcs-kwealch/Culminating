@@ -57,6 +57,32 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 let scale = 20
 
+//Functions
+func drawArrow(){
+    //Start Drawing Arrow
+
+    t.penDown()
+    t.forward(steps: 3 * scale)
+    t.right(by: 90)
+    t.forward(steps: 1 * scale)
+    t.left(by: 135)
+    t.forward(steps: 3 * scale - 4)
+    t.left(by: 90)
+    t.forward(steps: 3 * scale - 4)
+    t.left(by: 135)
+    t.forward(steps: 1 * scale)
+    t.right(by: 90)
+    t.forward(steps: 3 * scale)
+    t.left(by: 90)
+    t.forward(steps: 2 * scale)
+    t.left(by: 90)
+
+    //Move to Next Arrow Position
+    t.penUp()
+    t.forward(steps: 5 * scale)
+
+}
+
 // Get "T" in position
 
 t.penUp()
@@ -64,26 +90,11 @@ t.left(by: 90)
 t.forward(steps: 1 * scale)
 t.right(by: 90)
 
-//Start Drawing Arrow
-
-t.penDown()
-t.forward(steps: 3 * scale)
-t.right(by: 90)
-t.forward(steps: 1 * scale)
-t.left(by: 135)
-t.forward(steps: 3 * scale - 4)
-t.left(by: 90)
-t.forward(steps: 3 * scale - 4)
-t.left(by: 135)
-t.forward(steps: 1 * scale)
-t.right(by: 90)
-t.forward(steps: 3 * scale)
-t.left(by: 90)
-t.forward(steps: 2 * scale)
-t.left(by: 90)
-
-
-
+for _ in 1...6{
+    //Start Drawing Arrow
+drawArrow()
+    
+}
 
 
 
