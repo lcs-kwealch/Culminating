@@ -21,7 +21,7 @@ import CanvasGraphics
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
 // Create a turtle that can draw upon the canvas
-let turtle = Tortoise(drawingUpon: canvas)
+let t = Tortoise(drawingUpon: canvas)
 
 // Create a pen that can draw upon the canvas
 let p = Pen(drawingUpon: canvas)
@@ -40,9 +40,6 @@ PlaygroundPage.current.liveView = canvas
  
  */
 
-// Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
 
 // Show a grid
 canvas.drawAxes(withScale: true, by: 20, color: .black)
@@ -57,21 +54,177 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  */
 
 // Begin writing your code below (you can remove the examples shown)
+let scale = 20
 
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
+func drawDiamond(){
+    t.forward(steps: 2 * scale + 16)
+    t.left(by: 90)
+    t.forward(steps: 2 * scale + 16)
+    t.left(by: 90)
+    t.forward(steps: 2 * scale + 16)
+    t.left(by: 90)
+    t.forward(steps: 2 * scale + 16)
+    t.left(by: 90)
+    
+}
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
+func drawSquare(){
+    t.forward(steps: 4 * scale)
+    t.left(by: 90)
+    t.forward(steps: 4 * scale)
+    t.left(by: 90)
+    t.forward(steps: 4 * scale)
+    t.left(by: 90)
+    t.forward(steps: 4 * scale)
+    t.left(by: 90)
+    
+}
 
-// Go back to origin
-p.goToOrigin()
+func positionForSquares(){
+    //Get to start of row of squares
+    t.penUp()
+    t.left(by: 135)
+    t.forward(steps: 46 * scale)
+    t.right(by: 90)
+    t.forward(steps: 4 * scale)
+    t.right(by: 90)
+    t.forward(steps: 2 * scale)
+    t.penDown()
+    
+}
 
-// Change the pen color
-p.penColor = .red
+func drawRowOfSquares(){
+    for _ in 1...8{
+        //Draw Square
+        drawSquare()
 
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+        //Get to Next Position
+        t.penUp()
+        t.forward(steps: 4 * scale)
+        t.penDown()
+
+        
+    }
+    
+}
+
+func positionForDiamonds(){
+    t.penUp()
+    t.left(by: 180)
+    t.forward(steps: 28 * scale)
+    t.right(by: 90)
+    t.forward(steps: 4 * scale)
+    t.right(by: 45)
+    t.penDown()
+    
+}
+
+func drawRowOfDiamonds(){
+   
+    for _ in 1...10{
+        //Draw Diamond
+        drawDiamond()
+
+        //Move to Next Position
+
+        t.penUp()
+        t.right(by: 45)
+        t.forward(steps: 4 * scale)
+        t.left(by: 45)
+        t.penDown()
+        
+    }
+    
+}
+
+//Get Turtle in Position for First Row
+t.penUp()
+t.forward(steps: 2 * scale)
+t.penDown()
+t.left(by: 45)
+
+//Row of Diamonds
+
+drawRowOfDiamonds()
+
+//Position for Squares
+
+positionForSquares()
+
+//Row of Squares
+
+drawRowOfSquares()
+
+//Position for Diamonds
+
+positionForDiamonds()
+
+//Row of Diamonds
+
+drawRowOfDiamonds()
+
+//Positon for 4 Row
+
+positionForSquares()
+
+//Row of Squares
+
+drawRowOfSquares()
+
+//Position for Row 5
+
+positionForDiamonds()
+
+//Row of Diamonds
+
+drawRowOfDiamonds()
+
+//Position for Row 6
+
+positionForSquares()
+
+//Row of Squares
+
+drawRowOfSquares()
+
+//Position for Row 7
+
+positionForDiamonds()
+
+//Row of Diamonds
+
+drawRowOfDiamonds()
+
+//Position for Row 8
+
+positionForSquares()
+
+//Row of Squares
+
+drawRowOfSquares()
+
+//Position for Row 9
+
+positionForDiamonds()
+
+//Row of Diamonds
+
+drawRowOfDiamonds()
+
+//Position for Row 10
+
+positionForSquares()
+
+//Row of Squares
+
+drawRowOfSquares()
+
+//Position for Row 11
+
+positionForDiamonds()
+
+
+
 
 /*:
  ## Show the Live View

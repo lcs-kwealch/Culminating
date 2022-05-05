@@ -121,7 +121,7 @@ t.left(by: 90)
 t.forward(steps: 25 * scale)
 t.left(by: 180)
 
-//Row 2 of Arrows
+//Row of Arrows
 for _ in 1...5{
     //Start Drawing Arrow
 drawArrow()
@@ -138,7 +138,7 @@ t.left(by: 90)
 t.forward(steps: 25 * scale)
 t.left(by: 180)
 
-//Row 2 of Arrows
+//Row of Arrows
 for _ in 1...5{
     //Start Drawing Arrow
 drawArrow()
@@ -155,7 +155,7 @@ t.left(by: 90)
 t.forward(steps: 25 * scale)
 t.left(by: 180)
 
-//Row 2 of Arrows
+//Row of Arrows
 for _ in 1...5{
     //Start Drawing Arrow
 drawArrow()
@@ -172,7 +172,7 @@ t.left(by: 90)
 t.forward(steps: 25 * scale)
 t.left(by: 180)
 
-//Row 2 of Arrows
+//Row of Arrows
 for _ in 1...5{
     //Start Drawing Arrow
 drawArrow()
@@ -189,7 +189,7 @@ t.left(by: 90)
 t.forward(steps: 25 * scale)
 t.left(by: 180)
 
-//Row 2 of Arrows
+//Row of Arrows
 for _ in 1...5{
     //Start Drawing Arrow
 drawArrow()
