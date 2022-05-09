@@ -21,7 +21,7 @@ import CanvasGraphics
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
 // Create a turtle that can draw upon the canvas
-let turtle = Tortoise(drawingUpon: canvas)
+let t = Tortoise(drawingUpon: canvas)
 
 // Create a pen that can draw upon the canvas
 let p = Pen(drawingUpon: canvas)
@@ -40,9 +40,7 @@ PlaygroundPage.current.liveView = canvas
  
  */
 
-// Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
-                           y: canvas.height / 2))
+
 
 // Show a grid
 canvas.drawAxes(withScale: true, by: 20, color: .black)
@@ -55,23 +53,58 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
 
  */
+let scale = 20
 
-// Begin writing your code below (you can remove the examples shown)
+func drawParallelogram(){
+    t.penDown()
 
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
+    t.forward(steps: 3 * scale)
+    t.left(by: 135)
+    t.forward(steps: 2 * scale + 15)
+    t.left(by: 45)
+    t.forward(steps: 3 * scale)
+    t.left(by: 135)
+    t.forward(steps: 2 * scale + 15)
+    t.left(by: 45)
+    
+}
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
+func positionForParallelogram(){
+    t.penUp()
+    t.forward(steps: 3 * scale)
+    
+}
 
-// Go back to origin
-p.goToOrigin()
+//Get Turtle in Position
+t.penUp()
+t.left(by: 90)
+t.forward(steps: 1 * scale)
+t.right(by: 90)
 
-// Change the pen color
-p.penColor = .red
+for _ in 1...11{
+    //Draw First Parallelogram
+    drawParallelogram()
 
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+    //Get to next Spot
+    positionForParallelogram()
+    
+}
+
+//Get Ready for New Row
+t.penUp()
+t.left(by: 180)
+t.forward(steps: 35 * scale)
+t.right(by: 90)
+t.forward(steps: 2 * scale)
+t.right(by: 90)
+
+//Row 2
+//get in position
+t.forward(steps: 1 * scale)
+
+//Draw
+t.left(by: 135)
+t.forward(steps: 2 * scale + 15)
 
 /*:
  ## Show the Live View
