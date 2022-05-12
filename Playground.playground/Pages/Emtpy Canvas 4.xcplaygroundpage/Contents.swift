@@ -159,70 +159,25 @@ drawRowOfSquares()
 
 positionForDiamonds()
 
-//Row of Diamonds
+//Draw the rest
+for _ in 1...4{
+    //Row of Diamonds
 
-drawRowOfDiamonds()
+    drawRowOfDiamonds()
 
-//Positon for 4 Row
+    //Positon for 4 Row
 
-positionForSquares()
+    positionForSquares()
 
-//Row of Squares
+    //Row of Squares
 
-drawRowOfSquares()
+    drawRowOfSquares()
 
-//Position for Row 5
+    //Position for Row 5
 
-positionForDiamonds()
-
-//Row of Diamonds
-
-drawRowOfDiamonds()
-
-//Position for Row 6
-
-positionForSquares()
-
-//Row of Squares
-
-drawRowOfSquares()
-
-//Position for Row 7
-
-positionForDiamonds()
-
-//Row of Diamonds
-
-drawRowOfDiamonds()
-
-//Position for Row 8
-
-positionForSquares()
-
-//Row of Squares
-
-drawRowOfSquares()
-
-//Position for Row 9
-
-positionForDiamonds()
-
-//Row of Diamonds
-
-drawRowOfDiamonds()
-
-//Position for Row 10
-
-positionForSquares()
-
-//Row of Squares
-
-drawRowOfSquares()
-
-//Position for Row 11
-
-positionForDiamonds()
-
+    positionForDiamonds()
+    
+}
 
 
 
